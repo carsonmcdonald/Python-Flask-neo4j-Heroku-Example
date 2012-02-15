@@ -1,0 +1,20 @@
+{{#with question}}
+
+<div class="resultsection">
+  <h3>Question({{post_id}})
+      <a href="#" class="postbookmark" data-postid="{{post_id}}"><i class="icon-bookmark {{#if bookmarked}} {{else}}icon-white{{/if}}"></i></a>
+  </h3>
+
+  <p>
+    <b>Question:</b> <a href="#" class="postdrilldown" data-postid="{{post_id}}">{{post_id}}</a> <br/>
+    <b>Title:</b> <a href="http://programmers.stackexchange.com/questions/{{post_id}}"><span class="questiontitle" data-postid="{{post_id}}"></span> <img src="http://sstatic.net/programmers/img/favicon.ico"/></a> <br/> 
+    <b>Votes:</b> {{score}} <b>Favorites:</b> {{favorite_count}} <b>Views:</b> <span class="questionviews" data-postid="{{post_id}}"></span> <br/> 
+    <b>Accepted Answer:</b> <span class="qaccepteda" data-postid="{{post_id}}"></span> <br/> 
+  </p>
+
+  <div>
+    <a href="#" class="complexquery" data-query="similarly.tagged" data-value="{{post_id}}">Similarly Tagged</a>
+  </div>
+</div>
+
+{{/with}}

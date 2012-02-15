@@ -1,0 +1,32 @@
+{{#with user}}
+
+<div class="resultsection">
+  <h3>User({{user_id}})
+      <a href="#" class="userbookmark" data-userid="{{user_id}}"><i class="icon-bookmark {{#if bookmarked}} {{else}}icon-white{{/if}}"></i></a>
+  </h3>
+
+  <table width="100%">
+    <tr>
+      <td width="76px" style="padding:3px;">
+        <a href="#" class="userdrilldown" data-userid="{{user_id}}"><img width="64" height="64" class="profileimage" data-userid="{{user_id}}" src=""/></a>
+      </td>
+      <td valign="top">
+        <b>Name:</b> <a href="#" class="userdrilldown" data-userid="{{user_id}}">{{name}}</a> <br/>
+        <b>Reputation:</b> <span class="reparea" data-userid="{{user_id}}"></span> <br/>
+        <b>Link:</b> <a href="http://programmers.stackexchange.com/users/{{user_id}}">programmers.stackexchange.com/users/{{user_id}} <img src="http://sstatic.net/programmers/img/favicon.ico"/></a>
+      </td>
+    </tr>
+  </table>
+
+  <div>
+    <a href="#" class="complexquery" data-query="user.answered" data-value="{{user_id}}">Answered Questions</a> |
+    <a href="#" class="complexquery" data-query="questions.answered" data-value="{{user_id}}">Questions Answered</a> |
+    <a href="#" class="complexquery" data-query="user.question.tags" data-value="{{user_id}}">Questions Tags</a> <br/>
+
+    <a href="#" class="complexquery" data-query="user.qtags.count" data-value="{{user_id}}">Questions Tag Popularity</a> |
+    <a href="#" class="complexquery" data-query="user.atags.count" data-value="{{user_id}}">Answer Tag Popularity</a>
+  </div>
+
+</div>
+
+{{/with}}

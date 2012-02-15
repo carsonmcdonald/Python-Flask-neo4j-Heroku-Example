@@ -1,0 +1,13 @@
+{{#with user}}
+
+  <div class="bookmarkhead">
+    <a href="#" class="deluserbookmark" data-userid="{{user_id}}"><i class="icon-remove-sign"></i></a>
+
+    <form class="form-horizontal" action="javascript:void(0);">
+      <a href="#" class="userdrilldown" data-bookmarked="true" data-userid="{{user_id}}">{{name}}</a> <br/>
+      Weight: <input type="text" class="adjustuserweight" data-userid="{{user_id}}" value="{{weight}}"/>
+    </form>
+
+  </div>
+
+{{/with}}

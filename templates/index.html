@@ -1,0 +1,72 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]> <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>NEO4J Demo - Python</title>
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body class="bgone">
+
+  <div class="navbar">
+    <div class="navbar-inner">
+      <div class="container">
+        <ul class="nav pull-right">
+          <li><a class="aboutlink" href="#">About</a></li>
+          <li><a class="helplink" href="#">Help</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row" id="headerrow">
+      <div class="span12">
+
+        <form id="url-entry" class="form-horizontal" action="javascript:void(0);">
+          <div class="control-group">
+            <label class="control-label span1" for="inputURL"><span id="startingpoint">Starting point:</span></label>
+            <div class="controls">
+              <input type="text" class="span8" id="inputURL" placeholder="URL or user:13411 or post:9000 or tag:school"/> <button type="submit" class="btn btn-primary">Load</button>
+              <p class="help-block">Enter a <a href="http://programmers.stackexchange.com/">Programmers</a> user, post or tag URL or a shortcut user:&gt;user id&gt;, post:&lt;post id&gt; or tag:&lt;tag name&gt; to get started.</p>
+            </div>
+          </div>
+        </form>
+
+      </div>
+    </div>
+    <div class="row" id="alertarea"></div>
+    <div class="row">
+      <div class="span8" style="min-height: 1024px;">
+        <h3 class="contenthead">Results <span style="display:inline-block; width:65px; text-align:left;" id="resultruntime"></span></h3>
+        <div id="content" style="padding-top: 10px;"></div>
+      </div>
+
+      <div class="span3">
+        <h3 class="contenthead">Bookmarks</h3>
+        <div id="bookmarkcontent"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
+  <script src="/static/js/libs/jquery.address-1.4.min.js"></script>
+  <script src="/static/js/libs/underscore-min.js"></script>
+  <script src="/static/js/libs/handlebars.js"></script>
+  <script src="/static/js/libs/bootstrap.min.js"></script>
+
+  <script src="/static/js/templates.js"></script>
+  <script src="/static/js/utils.js"></script>
+  <script src="/static/js/seapi.js"></script>
+  <script src="/static/js/app.js"></script>
+
+</body>
+</html>

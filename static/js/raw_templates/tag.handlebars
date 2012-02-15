@@ -1,0 +1,20 @@
+{{#with tag}}
+
+<div class="resultsection">
+  <h3>Tag({{name}})
+      <a href="#" class="tagbookmark" data-tagname="{{name}}"><i class="icon-bookmark {{#if bookmarked}} {{else}}icon-white{{/if}}"></i></a>
+  </h3>
+
+  <p>
+    <b>Tag:</b> <a href="#" class="tagdrilldown" data-tagname="{{name}}">{{name}}</a> <br/>
+    <b>Count:</b> <span class="tagcountarea" data-tagname="{{name}}"></span> <br/> 
+    <b>Has synonyms:</b> <span class="tagsynarea" data-tagname="{{name}}"></span> <br/> 
+    <b>Link:</b> <a href="http://programmers.stackexchange.com/tags/{{name}}/info">http://programmers.stackexchange.com/tags/{{name}}/info <img src="http://sstatic.net/programmers/img/favicon.ico"/></a>
+  </p>
+
+  <div>
+    <a href="#">Related Tags</a>
+  </div>
+</div>
+
+{{/with}}

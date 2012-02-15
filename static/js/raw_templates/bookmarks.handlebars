@@ -1,0 +1,51 @@
+<div style="height: 45px; padding: 5px; text-align:center;">
+  {{#if bookmarks_id}}
+  <form class="form-horizontal">
+    <a href="#" class="btn complexquery" data-query="weighted.bookmark.recomendations" data-value="{{bookmarks_id}}">Recomendations</a>
+  </form>
+  {{/if}}
+</div>
+
+<h3>Users</h3>
+<ul class="bookmarklist" id="users">
+  {{#if users}}
+    {{#each users}}
+      <li>
+      {{> user_bookmarked}}
+      </li>
+    {{/each}}
+  {{else}}
+    <li>None</li>
+  {{/if}}
+</ul>
+
+<h3>Posts</h3>
+<ul class="bookmarklist" id="posts">
+  {{#if posts}}
+    {{#each posts}}
+      <li>
+      {{#if question}}
+        {{> question_bookmarked}}
+      {{/if}}
+      {{#if answer}}
+        {{> answer_bookmarked}}
+      {{/if}}
+      </li>
+    {{/each}}
+  {{else}}
+    <li>None</li>
+  {{/if}}
+</ul>
+
+<h3>Tags</h3>
+<ul class="bookmarklist" id="tags">
+  {{#if tags}}
+    {{#each tags}}
+      <li>
+      {{> tag_bookmarked}}
+      </li>
+    {{/each}}
+  {{else}}
+    <li>None</li>
+  {{/if}}
+</ul>

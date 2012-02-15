@@ -1,0 +1,14 @@
+{{#with tag}}
+
+  <div class="bookmarkhead">
+    <a href="#" class="deltagbookmark" data-tagname="{{name}}"><i class="icon-remove-sign"></i></a>
+
+    <form class="form-horizontal" action="javascript:void(0);">
+      <a href="#" class="tagdrilldown" data-bookmarked="true" data-tagname="{{name}}">{{name}}</a> <br/>
+
+      Weight: <input type="text" class="adjusttagweight" data-tagname="{{name}}" value="{{weight}}"/>
+    </form> <br/>
+
+  </div>
+
+{{/with}}

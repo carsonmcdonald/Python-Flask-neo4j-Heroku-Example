@@ -1,0 +1,89 @@
+<ul class="breadcrumb">
+  {{#each breadcrumb}}
+    {{#if truncated}}
+      <i class="icon-chevron-left"></i> {{count}} more <span class="divider"><i class="icon-chevron-right"></i></span>
+    {{else}}
+      {{#if active}}
+        <li class="active">
+          <a href="#" class="breadcrumblink" data-index="{{index}}">{{title}}</a>
+        </li>
+      {{else}}
+        <li>
+          <a href="#" class="breadcrumblink" data-index="{{index}}">{{title}}</a> <span class="divider"><i class="icon-chevron-right"></i></span>
+        </li>
+      {{/if}}
+    {{/if}}
+  {{/each}}
+</ul>
+
+<h3>Root Node</h3>
+<br/>
+
+{{#with node}}
+  {{#if answer}}
+    {{> answer}}
+  {{/if}}
+  {{#if question}}
+    {{> question}}
+  {{/if}}
+  {{#if tag}}
+    {{> tag}}
+  {{/if}}
+  {{#if user}}
+    {{> user}}
+  {{/if}}
+{{/with}}
+
+<br/>
+<h3>Incoming Nodes</h3>
+<br/>
+
+<ul class="nodelist">
+  {{#if incoming}}
+    {{#each incoming}}
+      <li>
+      {{#if answer}}
+        {{> answer}}
+      {{/if}}
+      {{#if question}}
+        {{> question}}
+      {{/if}}
+      {{#if tag}}
+        {{> tag}}
+      {{/if}}
+      {{#if user}}
+        {{> user}}
+      {{/if}}
+      </li>
+    {{/each}}
+  {{else}}
+    Nothing found
+  {{/if}}
+</ul>
+
+<br/>
+<h3>Outgoing Nodes</h3>
+<br/>
+
+<ul class="nodelist">
+  {{#if outgoing}}
+    {{#each outgoing}}
+      <li>
+      {{#if answer}}
+        {{> answer}}
+      {{/if}}
+      {{#if question}}
+        {{> question}}
+      {{/if}}
+      {{#if tag}}
+        {{> tag}}
+      {{/if}}
+      {{#if user}}
+        {{> user}}
+      {{/if}}
+      </li>
+    {{/each}}
+  {{else}}
+    Nothing found
+  {{/if}}
+</ul>

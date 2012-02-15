@@ -1,0 +1,14 @@
+{{#with question}}
+
+  <div class="bookmarkhead">
+    <a href="#" class="delpostbookmark" data-postid="{{post_id}}"><i class="icon-remove-sign"></i></a>
+
+    <form class="form-horizontal" action="javascript:void(0);">
+      Question: <a href="#" class="postdrilldown" data-bookmarked="true" data-postid="{{post_id}}">{{post_id}}</a> <br/>
+
+      Weight: <input type="text" class="adjustpostweight" data-postid="{{post_id}}" value="{{weight}}"/>
+    </form> <br/>
+
+  </div>
+
+{{/with}}

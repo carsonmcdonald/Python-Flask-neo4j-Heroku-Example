@@ -1,0 +1,64 @@
+<h3>Recomendations</h3>
+<br/>
+<ul class="nodelist">
+  {{#if result}}
+    {{#each result}}
+      <li>
+        <div class="resultsection">
+
+        {{#if postId}}
+          {{#if isAnswer}}
+            <h3>Answer({{postId}})</h3>
+
+            <table style="padding:5px;">
+              <tr><td valign="top" align="right"><b>Answer:</b></td><td><a href="#" class="postdrilldown" data-postid="{{postId}}">{{postId}}</a></td></tr>
+              <tr><td valign="top" align="right"><b>Votes:</b></td><td><span class="answervotes" data-postid="{{postId}}"></span></td></tr>
+              <tr><td valign="top" align="right"><b>Accepted:</b></td><td><span class="answeraccepted" data-postid="{{postId}}"></span></td></tr>
+              <tr><td valign="top" align="right"><b>Link:</b></td><td><a href="http://programmers.stackexchange.com/a/{{postId}}">http://programmers.stackexchange.com/a/{{postId}} <img src="http://sstatic.net/programmers/img/favicon.ico"/></a></td></tr>
+            </table>
+          {{else}}
+            <h3>Question({{postId}})</h3>
+
+            <table style="padding:5px;">
+              <tr><td valign="top" align="right"><b>Question:</b></td><td><a href="#" class="postdrilldown" data-postid="{{questionId}}">{{questionId}}</a></td></tr>
+              <tr><td valign="top" align="right"><b>Title:</b></td><td><a href="http://programmers.stackexchange.com/questions/{{questionId}}"><span class="questiontitle" data-postid="{{questionId}}"></span> <img src="http://sstatic.net/programmers/img/favicon.ico"/></a></td></tr>
+              <tr><td valign="top" align="right"><b>Votes:</b></td><td><span class="questionvotes" data-postid="{{questionId}}"></span></td></tr>
+              <tr><td valign="top" align="right"><b>Views:</b></td><td><span class="questionviews" data-postid="{{value}}"></span></td></tr>
+              <tr><td valign="top" align="right"><b>Accepted Answer:</b></td><td><span class="qaccepteda" data-postid="{{value}}"></span></td></tr>
+            </table>
+          {{/if}}
+        {{/if}}
+
+        {{#if userId}}
+          <h3>User({{userId}})</h3>
+
+          <table style="padding:5px;">
+            <tr>
+              <td width="76px" style="padding:3px;">
+                <a href="#" class="userdrilldown" data-userid="{{userId}}"><img width="64" height="64" class="profileimage" data-userid="{{userId}}" src=""/></a>
+              </td>
+              <td valign="top">
+                <b>Name:</b> <a href="#" class="userdrilldown" data-userid="{{userId}}"><span class="username" data-userid="{{userId}}"></span></a> <br/>
+                <b>Reputation:</b> <span class="reparea" data-userid="{{userId}}"></span> <br/>
+                <b>Link:</b> <a href="http://programmers.stackexchange.com/users/{{userId}}">programmers.stackexchange.com/users/{{userId}} <img src="http://sstatic.net/programmers/img/favicon.ico"/></a>
+              </td>
+            </tr>
+          </table>
+        {{/if}}
+
+        {{#if tagName}}
+          <h3>Tag({{tagName}})</h3>
+
+          <table style="padding:5px;">
+            <tr><td valign="top" align="right"><b>Tag:</b></td><td><a href="#" class="tagdrilldown" data-tagname="{{tagName}}">{{tagName}}</a></td></tr>
+            <tr><td valign="top" align="right"><b>Count:</b></td><td>{{tagCount}}</td></tr>
+          </table>
+        {{/if}}
+
+        </div>
+      </li>
+    {{/each}}
+  {{else}}
+    <li>None</li>
+  {{/if}}
+</ul>

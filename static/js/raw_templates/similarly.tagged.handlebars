@@ -1,0 +1,44 @@
+<div class="resultsection">
+  <h3>Question({{value}})</h3>
+
+  <p>
+    <b>Question:</b> <a href="#" class="postdrilldown" data-postid="{{value}}">{{value}}</a> <br/>
+    <b>Title:</b> <a href="http://programmers.stackexchange.com/questions/{{value}}"><span class="questiontitle" data-postid="{{value}}"></span> <img src="http://sstatic.net/programmers/img/favicon.ico"/></a> <br/> 
+    <b>Votes:</b> <span class="questionvotes" data-postid="{{value}}"></span> <b>Views:</b> <span class="questionviews" data-postid="{{value}}"></span> <br/> 
+    <b>Accepted Answer:</b> <span class="qaccepteda" data-postid="{{value}}"></span> <br/> 
+  </p>
+
+  <div>
+    <a href="#" class="complexquery" data-query="similarly.tagged" data-value="{{value}}">Similarly Tagged</a>
+  </div>
+</div>
+
+<br/>
+<h3>Similarly Tagged</h3>
+<br/>
+<ul class="nodelist">
+  {{#if result}}
+    {{#each result}}
+      <li>
+        <div class="resultsection">
+          <h3>Result</h3>
+
+          <table style="padding:5px;">
+            <tr><td valign="top" align="right"><b>Question:</b></td><td><a href="#" class="postdrilldown" data-postid="{{questionId}}">{{questionId}}</a></td></tr>
+            <tr><td valign="top" align="right"><b>Title:</b></td><td><a href="http://programmers.stackexchange.com/questions/{{post_id}}"><span class="questiontitle" data-postid="{{questionId}}"></span> <img src="http://sstatic.net/programmers/img/favicon.ico"/></a></td></tr>
+            <tr>
+              <td valign="top" align="right"><b>Tags:</b></td>
+              <td>
+                {{#each tags}}
+                  <a href="#" class="tagdrilldown" data-tagname="{{.}}">{{.}}</a>
+                {{/each}}
+              </td>
+            </tr>
+          </table>
+        </div>
+      </li>
+    {{/each}}
+  {{else}}
+    <li>None</li>
+  {{/if}}
+</ul>

@@ -1,0 +1,37 @@
+<div class="resultsection">
+  <h3>Answer({{value}})</h3>
+
+  <p>
+    <b>Answer:</b> <a href="#" class="postdrilldown" data-postid="{{value}}">{{value}}</a> <br/>
+    <b>Votes:</b> <span class="answervotes" data-postid="{{value}}"></span> <b>Accepted:</b> <span class="answeraccepted" data-postid="{{value}}"></span> <br/>
+    <b>Link:</b> <a href="http://programmers.stackexchange.com/a/{{value}}">http://programmers.stackexchange.com/a/{{value}} <img src="http://sstatic.net/programmers/img/favicon.ico"/></a>
+  </p>
+
+  <div>
+    <a href="#" class="complexquery" data-query="similar.answers" data-value="{{value}}">Similar Answers</a>
+  </div>
+</div>
+
+<br/>
+<h3>Similar Answers</h3>
+<br/>
+<ul class="nodelist">
+  {{#if result}}
+    {{#each result}}
+      <li>
+        <div class="resultsection">
+          <h3>Result</h3>
+
+          <table style="padding:5px;">
+            <tr><td valign="top" align="right"><b>Answer:</b></td><td><a href="#" class="postdrilldown" data-postid="{{answerId}}">{{answerId}}</a></td></tr>
+            <tr><td valign="top" align="right"><b>Votes:</b></td><td><span class="answervotes" data-postid="{{answerId}}"></span></td></tr>
+            <tr><td valign="top" align="right"><b>Accepted:</b></td><td><span class="answeraccepted" data-postid="{{answerId}}"></span></td></tr>
+            <tr><td valign="top" align="right"><b>Link:</b></td><td><a href="http://programmers.stackexchange.com/a/{{answerId}}">http://programmers.stackexchange.com/a/{{answerId}} <img src="http://sstatic.net/programmers/img/favicon.ico"/></a></td></tr>
+          </table>
+        </div>
+      </li>
+    {{/each}}
+  {{else}}
+    <li>None</li>
+  {{/if}}
+</ul>

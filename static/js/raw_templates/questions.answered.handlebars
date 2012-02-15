@@ -1,0 +1,49 @@
+<div class="resultsection">
+  <h3>User({{value}})</h3>
+
+  <table width="100%">
+    <tr>
+      <td  width="76px" style="padding:3px;">
+        <a href="#" class="userdrilldown" data-userid="{{value}}"><img width="64" height="64" class="profileimage" data-userid="{{value}}" src=""/></a>
+      </td>
+      <td valign="top">
+        <b>Name:</b> <a href="#" class="userdrilldown" data-userid="{{value}}"><span class="username" data-userid="{{value}}"></span></a> <br/>
+        <b>Reputation:</b> <span class="reparea" data-userid="{{value}}"></span> <br/>
+        <b>Link:</b> <a href="http://programmers.stackexchange.com/users/{{value}}">programmers.stackexchange.com/users/{{value}} <img src="http://sstatic.net/programmers/img/favicon.ico"/></a>
+      </td>
+    </tr>
+  </table>
+
+  <div>
+    <a href="#" class="complexquery" data-query="user.answered" data-value="{{value}}">Answered Questions</a> |
+    <a href="#" class="complexquery" data-query="questions.answered" data-value="{{value}}">Questions Answered</a> |
+    <a href="#" class="complexquery" data-query="user.question.tags" data-value="{{value}}">Questions Tags</a> <br/>
+
+    <a href="#" class="complexquery" data-query="user.qtags.count" data-value="{{value}}">Questions Tag Popularity</a> |
+    <a href="#" class="complexquery" data-query="user.atags.count" data-value="{{value}}">Answer Tag Popularity</a>
+  </div>
+</div>
+
+<br/>
+<h3>Questions Answered</h3>
+<br/>
+<ul class="nodelist">
+  {{#if result}}
+    {{#each result}}
+      <li>
+        <div class="resultsection">
+          <h3>Result</h3>
+
+          <table style="padding:5px;">
+            <tr><td valign="top" align="right"><b>Question:</b></td><td><a href="#" class="postdrilldown" data-postid="{{questionId}}">{{questionId}}</a></td></tr>
+            <tr><td valign="top" align="right"><b>Title:</b></td><td><a href="http://programmers.stackexchange.com/questions/{{post_id}}"><span class="questiontitle" data-postid="{{questionId}}"></span> <img src="http://sstatic.net/programmers/img/favicon.ico"/></a></td></tr>
+            <tr><td valign="top" align="right"><b>Answerer:</b></td><td><a href="#" class="userdrilldown" data-userid="{{answererId}}">{{answererId}}</a></td></tr>
+            <tr><td valign="top" align="right"><b>Answer:</b></td><td><a href="#" class="postdrilldown" data-postid="{{answerId}}">{{answerId}}</a></td></tr>
+          </table>
+        </div>
+      </li>
+    {{/each}}
+  {{else}}
+    <li>None</li>
+  {{/if}}
+</ul>
