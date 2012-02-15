@@ -51,6 +51,9 @@ Heroku Deployment
 
     git clone git@github.com:carsonmcdonald/Python-Flask-neo4j-Heroku-Example.git
     cd Python-Flask-neo4j-Heroku-Example
+    virtualenv venv --distribute
+    source venv/bin/activate
+    pip install -r requirements.txt
     heroku create --stack cedar
     heroku addons:add neo4j
     heroku scale web=0
