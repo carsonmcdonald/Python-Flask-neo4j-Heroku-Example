@@ -38,8 +38,10 @@ After verifing that requirements are ready the following should get things runni
     cd Python-Flask-neo4j-Heroku-Example
     virtualenv venv --distribute
     source venv/bin/activate
-    pip install
+    pip install -r requirements.txt
+    # The following command will take a while to run but will produce output as it does
     python load.py
+    # Once the load is complete the app is ready to run
     python app.py 
 
 You can also use [Foreman](http://blog.daviddollar.org/2011/05/06/introducing-foreman.html) to run locally.
