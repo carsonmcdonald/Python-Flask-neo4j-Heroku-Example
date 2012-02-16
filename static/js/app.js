@@ -164,8 +164,8 @@ var neo4jDemo = (function()
   var _handleURLQuery = function(e) {
     e.stopPropagation();
 
-    var query_str = $(e.srcElement).find('#inputURL').val();
-    var query = utils.parseSEURL($(e.srcElement).find('#inputURL').val());
+    var query_str = $('#inputURL').val();
+    var query = utils.parseSEURL(query_str);
     if(query == null) {
       $("#alertarea").html(Handlebars.templates.alert({'title':'Unknown Query', 'message':'Unable to parse the given query: ' + query_str}));
     } else {
