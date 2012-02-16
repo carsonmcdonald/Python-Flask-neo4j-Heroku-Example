@@ -22,7 +22,7 @@ I'm using the following stack on the client side:
 * [underscore.js]( http://documentcloud.github.com/underscore/)
 * [Twitter bootstrap](https://github.com/twitter/bootstrap)
 
-If you find this code helpful take a minute and rate it on [Gensen](http://gensen.herokuapp.com/).
+If you find this code helpful take a minute and rate it on [Gensen](http://gensen.herokuapp.com/). If you want to use this code as a base for another project take a look at the comments labeled "neo4j note" for hints on what might be most useful.
 
 Deploying Localy
 ================
