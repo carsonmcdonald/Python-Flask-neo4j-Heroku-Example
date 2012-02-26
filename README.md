@@ -1,7 +1,7 @@
 Python + Flask + neo4j on Heroku Example
 ========================================
 
-I put this project together as an entry for the [Heroku neo4j challenge](http://neo4j-challenge.herokuapp.com/) and it should be fairly easy to get a feel for how to integrate neo4j into an app of your own or use as a base for a new app.
+I put this project together as an entry for the [Heroku neo4j challenge](http://neo4j-challenge.herokuapp.com/) and it should be fairly easy to get a feel for how to integrate neo4j into an app of your own or use as a base for a new app. Check out the [demo app](http://neo4j-python-example.herokuapp.com/) to see it in action.
 
 The app is a simple data explorer with bookmarking ability to show off some of the features of neo4j. A subset of data from a [Stack Exchange CC data dump](http://blog.stackoverflow.com/2009/06/stack-overflow-creative-commons-data-dump/), specifically [Programers Stack Exchange](http://programmers.stackexchange.com/), is used to populate a sample database. The bookmarking feature allows for weights to be added for later use in recomendations.
 
@@ -22,7 +22,7 @@ I'm using the following stack on the client side:
 * [underscore.js]( http://documentcloud.github.com/underscore/)
 * [Twitter bootstrap](https://github.com/twitter/bootstrap)
 
-If you find this code helpful take a minute and rate it on [Gensen](http://gensen.herokuapp.com/). If you want to use this code as a base for another project take a look at the comments labeled "neo4j note" for hints on what might be most useful.
+If you find this code helpful take a minute and rate it on [Gensen](http://gensen.herokuapp.com/show/25). If you want to use this code as a base for another project take a look at the comments labeled "neo4j note" for hints on what might be most useful.
 
 Deploying Localy
 ================
